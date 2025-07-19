@@ -5,4 +5,5 @@ class State(TypedDict):
     text: str
     entities: list
     final_symptoms: list
-    basic_check_result: bool
+    basic_count_check_result: bool
+    basic_conteinment_check_result: bool

@@ -26,6 +26,7 @@ print(graph.get_graph().draw_ascii())
 result = graph.invoke(input={
     "text": "",
     "entities": "",
-    "final_symptoms": ""
+    "final_symptoms": "",
+    "basic_conteinment_check_result": ""
 })
 print(result)

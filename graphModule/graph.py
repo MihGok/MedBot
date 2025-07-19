@@ -55,10 +55,9 @@ def transform_grouping_output(state):
 def perform_basic_check(state):
     validator = Validator()
     validator.basic_check(state)
+    validator.word_containment_check(state)
     return state
 
-
-# def decide_mod(state) -> Literal("",END):
 
 def final_node(state):
     print("Success")
