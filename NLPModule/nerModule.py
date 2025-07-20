@@ -15,6 +15,6 @@ class NERModule():
             if "##" in elem["word"]:
                 elem["word"] = elem["word"].replace("##", "")
                 words[-1] += (elem["word"])
-            else:
+            elif elem["word"] not in ([",", "the", "a"]):
                 words.append(elem["word"])
         return words
