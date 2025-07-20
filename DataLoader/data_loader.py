@@ -1,4 +1,5 @@
 import pandas as pd
+from random import randint
 
 
 class Datamodule:
@@ -6,6 +7,9 @@ class Datamodule:
         self.data_name = data_name
 
     def load(self):
-        self.data = pd.read_csv(self.data_name)
-        self.labels = set(self.data["label"])
-        self.text = self.data["text"]
+        with open("complainments.txt") as file:
+            lines = file.readlines()
+            number = randint(0, len(lines))
+            print(number)
+            self.text = lines[number]
+            print(self.text)

@@ -21,6 +21,8 @@ builder.add_edge("symptomps grouping", "grouping_transformer")
 builder.add_edge("grouping_transformer", "basic_validator")
 builder.add_edge("basic_validator", "final_node")
 
+
+
 graph = builder.compile()
 print(graph.get_graph().draw_ascii())
 result = graph.invoke(input={

@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 import os
 from LLMModule.LLM_output_transformer import Output_transfromer
 from ValidationModule.validator import Validator
-from typing import Literal
 
 load_dotenv()
 prompt = """
@@ -27,7 +26,7 @@ Example:
 def load_data(state):
     data_module = Datamodule()
     data_module.load()
-    state["text"] = data_module.text[15]
+    state["text"] = data_module.text
     return state
 
 
